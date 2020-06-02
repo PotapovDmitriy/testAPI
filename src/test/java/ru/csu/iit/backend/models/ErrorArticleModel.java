@@ -2,7 +2,7 @@ package ru.csu.iit.backend.models;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class ErrorDatasetModel {
+public class ErrorArticleModel {
 
     @JsonProperty(value = "batchcomplete")
     private String batchcomplete;

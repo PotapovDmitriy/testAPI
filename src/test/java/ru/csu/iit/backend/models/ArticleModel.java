@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.ArrayList;
 
-public class DatasetModel {
+public class ArticleModel {
 
     @JsonProperty(value = "batchcomplete")
     private String batchcomplete;

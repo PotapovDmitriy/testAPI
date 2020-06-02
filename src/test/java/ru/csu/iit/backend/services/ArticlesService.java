@@ -3,15 +3,15 @@ package ru.csu.iit.backend.services;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import ru.csu.iit.backend.builders.DatasetRequestBuilder;
-import ru.csu.iit.backend.models.DatasetModel;
-import ru.csu.iit.backend.models.ErrorDatasetModel;
+import ru.csu.iit.backend.models.ArticleModel;
+import ru.csu.iit.backend.models.ErrorArticleModel;
 
 import java.util.Properties;
 
-public class DatasetsService extends BaseService {
-    private static final String ENDPOINT = "datasets";
+public class ArticlesService extends BaseService {
+    private static final String ENDPOINT = "article";
 
-    public DatasetsService(Properties properties) {
+    public ArticlesService(Properties properties) {
         super(properties);
     }
 
@@ -19,18 +19,18 @@ public class DatasetsService extends BaseService {
         return new DatasetRequestBuilder(baseRequest());
     }
 
-    public DatasetModel getDataset(RequestSpecification requestSpecification) {
+    public ArticleModel getArticle(RequestSpecification requestSpecification) {
 
         return executePostDatasets(requestSpecification).then()
                 .extract()
-                .body().as(DatasetModel.class);
+                .body().as(ArticleModel.class);
     }
 
-    public ErrorDatasetModel getErrorsDataset(RequestSpecification requestSpecification) {
+    public ErrorArticleModel getErrorsAnswers(RequestSpecification requestSpecification) {
 
         return executePostDatasets(requestSpecification).then()
                 .extract()
-                .body().as(ErrorDatasetModel.class);
+                .body().as(ErrorArticleModel.class);
     }
 
     public Response executePostDatasets(RequestSpecification requestSpecification) {

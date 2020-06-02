@@ -10,20 +10,20 @@ public class SearchinfoModel {
     private int totalhits;
 
     @JsonProperty(value = "suggestion")
-    private ArrayList suggestion;
+    private String suggestion;
 
     @JsonProperty(value = "suggestionsnippet")
-    private ArrayList suggestionsnippet;
+    private String suggestionsnippet;
 
     public int getTotalhits() {
         return totalhits;
     }
 
-    public ArrayList getSuggestion() {
+    public String getSuggestion() {
         return suggestion;
     }
 
-    public ArrayList getSuggestionsnippet() {
+    public String getSuggestionsnippet() {
         return suggestionsnippet;
     }
 
@@ -31,11 +31,11 @@ public class SearchinfoModel {
         this.totalhits = totalhits;
     }
 
-    public void setSuggestion(ArrayList suggestion) {
+    public void setSuggestion(String suggestion) {
         this.suggestion = suggestion;
     }
 
-    public void setSuggestionsnippet(ArrayList suggestionsnippet) {
+    public void setSuggestionsnippet(String suggestionsnippet) {
         this.suggestionsnippet = suggestionsnippet;
     }
 }
