@@ -13,6 +13,7 @@ public class DatasetRequestBuilder {
         requestSpecification.queryParams("action", action);
         return this;
     }
+
     public DatasetRequestBuilder list(String search) {
         requestSpecification.queryParams("list", search);
         return this;
@@ -23,17 +24,9 @@ public class DatasetRequestBuilder {
         return this;
     }
 
-//    public DatasetRequestBuilder contains(String attributeName, String attributeValueSubstring) {
-//        return filter(String.format("substringof('%s', %s) eq true", attributeValueSubstring, attributeName));
-//    }
 
     public DatasetRequestBuilder format(String format) {
         requestSpecification.queryParam("format", format);
-        return this;
-    }
-
-    public DatasetRequestBuilder getFields(String... fields) {
-        requestSpecification.body(fields);
         return this;
     }
 
